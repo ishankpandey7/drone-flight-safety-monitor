@@ -1,0 +1,27 @@
+{
+ "name": "LSTM FORECASTER  --  8s itihaas se 1s ka future",
+ "threshold": 3.757999897003174,
+ "false_alarm": 0.0,
+ "recall": 0.9833333333333333,
+ "per_kind": {
+  "motor_degradation": 0.9333333333333333,
+  "prop_damage": 1.0,
+  "battery_sag": 1.0,
+  "imu_drift": 1.0
+ },
+ "per_kind_lead": {
+  "motor_degradation": 5.6200000000000045,
+  "prop_damage": 10.0,
+  "battery_sag": 9.800000000000004,
+  "imu_drift": 14.0
+ },
+ "lead_median": 10.010000000000002,
+ "lead_p25": 4.67,
+ "lead_min": 0.10000000000000142,
+ "lead_ge5": 0.7169811320754716,
+ "useless_alarms": 1,
+ "lag_median": 12.142404056383462,
+ "n_crashed": 53,
+ "lead_ge3": 0.8679245283018868,
+ "lead_ge10": 0.5094339622641509
+}

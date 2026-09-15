@@ -1,0 +1,20 @@
+{
+ "n_flights": 37,
+ "channels_out_of_band": [
+  "accel_z",
+  "alt",
+  "pwm_1",
+  "pwm_2",
+  "pwm_3",
+  "pwm_4",
+  "voltage",
+  "current",
+  "vibe_x",
+  "vibe_y",
+  "vibe_z"
+ ],
+ "test1_alarm_rate": 1.0,
+ "test1_median_ratio": 156.55991047932343,
+ "test2_alarm_rate": 0.10810810810810811,
+ "test3_alarm_rate": 0.05405405405405406
+}

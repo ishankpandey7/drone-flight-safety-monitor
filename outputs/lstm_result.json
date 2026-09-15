@@ -1,0 +1,27 @@
+{
+ "name": "LSTM AUTOENCODER  --  8s clips, 24-dim bottleneck",
+ "threshold": 9.168999671936035,
+ "false_alarm": 0.12,
+ "recall": 0.8333333333333334,
+ "per_kind": {
+  "motor_degradation": 0.6,
+  "prop_damage": 0.9333333333333333,
+  "battery_sag": 1.0,
+  "imu_drift": 0.8
+ },
+ "per_kind_lead": {
+  "motor_degradation": 5.32,
+  "prop_damage": 9.010000000000002,
+  "battery_sag": 15.0,
+  "imu_drift": 11.259999999999998
+ },
+ "lead_median": 9.020000000000003,
+ "lead_p25": 5.18,
+ "lead_min": 0.5600000000000023,
+ "lead_ge5": 0.6415094339622641,
+ "useless_alarms": 10,
+ "lag_median": 9.67664725470523,
+ "n_crashed": 53,
+ "lead_ge3": 0.6981132075471698,
+ "lead_ge10": 0.37735849056603776
+}

@@ -1,0 +1,17 @@
+# Core --- inke bina kuch nahi chalega
+numpy>=1.26
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.8
+
+# Sirf LSTM wale experiments ke liye (Step 4 aur 5).
+# Best system --- do Mahalanobis detectors --- ko torch ki zarurat NAHI hai.
+torch>=2.0
+
+# Sirf asli PX4 .ulg logs parse karne ke liye (src/px4_build.py).
+# Simulator pipeline iske bina poori chal jaati hai.
+pyulog>=1.0
+
+# ---------------------------------------------------------------------------
+# Tested on: Python 3.14, numpy 2.5.3, scipy 1.18.1, pandas 3.0.5,
+#            matplotlib 3.11.2, torch 2.14.0+cpu   (CPU kaafi hai, GPU nahi chahiye)

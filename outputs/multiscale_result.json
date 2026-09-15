@@ -1,0 +1,87 @@
+{
+ "alpha": 0.03,
+ "thresholds": {
+  "SLOW  (8s window)": 15.853,
+  "FAST  (2s window)": 23.9
+ },
+ "results": {
+  "SLOW  (8s window)": {
+   "name": "SLOW  (8s window)  akela",
+   "false_alarm": 0.0,
+   "recall": 0.9666666666666667,
+   "per_kind": {
+    "motor_degradation": 0.9333333333333333,
+    "prop_damage": 0.9333333333333333,
+    "battery_sag": 1.0,
+    "imu_drift": 1.0
+   },
+   "per_kind_lead": {
+    "motor_degradation": 5.540000000000006,
+    "prop_damage": 9.010000000000002,
+    "battery_sag": 16.0,
+    "imu_drift": 17.519999999999996
+   },
+   "lead_median": 10.0,
+   "lead_p25": 5.450000000000003,
+   "lead_min": 0.6600000000000037,
+   "lead_ge3": 0.7924528301886793,
+   "lead_ge5": 0.7358490566037735,
+   "lead_ge10": 0.49056603773584906,
+   "n_crashed": 53,
+   "useless_alarms": 2,
+   "lag_median": 7.6094970861809585
+  },
+  "FAST  (2s window)": {
+   "name": "FAST  (2s window)  akela",
+   "false_alarm": 0.04,
+   "recall": 1.0,
+   "per_kind": {
+    "motor_degradation": 1.0,
+    "prop_damage": 1.0,
+    "battery_sag": 1.0,
+    "imu_drift": 1.0
+   },
+   "per_kind_lead": {
+    "motor_degradation": 2.0600000000000023,
+    "prop_damage": 13.020000000000003,
+    "battery_sag": 20.0,
+    "imu_drift": 13.299999999999997
+   },
+   "lead_median": 10.0,
+   "lead_p25": 2.6600000000000037,
+   "lead_min": 0.480000000000004,
+   "lead_ge3": 0.7169811320754716,
+   "lead_ge5": 0.6792452830188679,
+   "lead_ge10": 0.5094339622641509,
+   "n_crashed": 53,
+   "useless_alarms": 0,
+   "lag_median": 5.213635211233203
+  },
+  "UNION": {
+   "name": "SLOW + FAST  (dono ka OR, milakar wahi 5% FA budget)",
+   "false_alarm": 0.04,
+   "recall": 1.0,
+   "per_kind": {
+    "motor_degradation": 1.0,
+    "prop_damage": 1.0,
+    "battery_sag": 1.0,
+    "imu_drift": 1.0
+   },
+   "per_kind_lead": {
+    "motor_degradation": 5.480000000000004,
+    "prop_damage": 13.020000000000003,
+    "battery_sag": 20.0,
+    "imu_drift": 17.519999999999996
+   },
+   "lead_median": 11.400000000000006,
+   "lead_p25": 5.82,
+   "lead_min": 0.5200000000000031,
+   "lead_ge3": 0.8679245283018868,
+   "lead_ge5": 0.8301886792452831,
+   "lead_ge10": 0.6037735849056604,
+   "n_crashed": 53,
+   "useless_alarms": 0,
+   "lag_median": 5.213635211233203
+  }
+ }
+}

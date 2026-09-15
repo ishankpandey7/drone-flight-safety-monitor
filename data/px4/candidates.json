@@ -1,0 +1,1217 @@
+[
+ {
+  "uid": "cec6a6c6-8240-4eda-83d1-7d4783f46ff8",
+  "vehicle": "Quadrotor",
+  "airframe": 4510,
+  "hw": "PX4_FMU_V3",
+  "sw": "v1.4.0",
+  "secs": 247,
+  "modes": "VTOL Takeoff"
+ },
+ {
+  "uid": "b02a4f0a-5fc9-4a61-aeee-5b90631e729b",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_CUBEORANGEPLUS",
+  "sw": "v1.15.0 (30e763)",
+  "secs": 335,
+  "modes": "Loiter"
+ },
+ {
+  "uid": "3e5b04a3-2fd6-434b-845c-d1db054b2fcc",
+  "vehicle": "Quadrotor",
+  "airframe": 4991,
+  "hw": "DROTEK_IO_STAR_TROIS",
+  "sw": "v4.1.2",
+  "secs": 657,
+  "modes": ""
+ },
+ {
+  "uid": "76de8213-30f8-49a5-a1f9-bac49b71fa5d",
+  "vehicle": "Quadrotor",
+  "airframe": 1007002,
+  "hw": "AUTERION_FMU_V6X",
+  "sw": "v1.17.0 (1ff3ff)",
+  "secs": 426,
+  "modes": "Position, Mission, Loiter, Return to Land, Takeoff"
+ },
+ {
+  "uid": "e80311a8-450f-4b34-964b-d1d3b9ec55f4",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MODALAI_VOXL2",
+  "sw": "v1.17.0 (eaf5c6)",
+  "secs": 248,
+  "modes": "Position"
+ },
+ {
+  "uid": "edc21df0-e299-47ab-ae60-8cd82a90dd81",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.16.2",
+  "secs": 906,
+  "modes": "Position, Mission, Loiter, Return to Land"
+ },
+ {
+  "uid": "4e2226d8-a13c-4aba-8683-35fb38308fb8",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "HNBQ_MYAPH7",
+  "sw": "v1.15.1 (f6a53b)",
+  "secs": 184,
+  "modes": "Position, Mission, Loiter"
+ },
+ {
+  "uid": "d3d4c883-ec06-4170-a96f-8559a53570ec",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 430,
+  "modes": "Loiter"
+ },
+ {
+  "uid": "444659fb-2d25-4cf9-9242-5cc8bf2c9c4a",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "HNBQ_MYAPH7",
+  "sw": "v1.15.1 (f6a53b)",
+  "secs": 184,
+  "modes": "Position, Mission, Loiter"
+ },
+ {
+  "uid": "d3ca6745-7f23-4030-a469-1f02eaaf2f8f",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "HNBQ_MYAPH7",
+  "sw": "v1.15.1 (f6a53b)",
+  "secs": 184,
+  "modes": "Position, Mission, Loiter"
+ },
+ {
+  "uid": "44f2c1f7-5b2d-402d-bf7a-f1310ba759b4",
+  "vehicle": "Quadrotor",
+  "airframe": "HolyBro QAV250",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.16.0",
+  "secs": 214,
+  "modes": "Altitude, Offboard"
+ },
+ {
+  "uid": "eef2c388-80e9-4033-9ac4-517f39d3818e",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.15.4",
+  "secs": 324,
+  "modes": "Altitude"
+ },
+ {
+  "uid": "c185d37a-b681-4b1d-8c2b-f69694504de1",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743",
+  "sw": "v1.15.2 (4817c0)",
+  "secs": 203,
+  "modes": "Position, Offboard"
+ },
+ {
+  "uid": "c0f84f10-0190-4084-9331-62ab1e418def",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.18.0-beta",
+  "secs": 319,
+  "modes": "Altitude, Position"
+ },
+ {
+  "uid": "ec20044a-4840-42a2-90c3-f62c0aa73ab3",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.24.0 (c9e46a)",
+  "secs": 241,
+  "modes": "Altitude, Position, Return to Land, Takeoff, Follow Target"
+ },
+ {
+  "uid": "c8fbd1a2-0dd0-4a2c-997b-017d3865dd54",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "TERRADRONE_TERRADFC_V2",
+  "sw": "v1.15.0 (5dc790)",
+  "secs": 785,
+  "modes": "Position, Land, Loiter, Stabilized"
+ },
+ {
+  "uid": "f99665e5-c528-4b82-aeef-b99f8ce8c41b",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 187,
+  "modes": "Position, Land"
+ },
+ {
+  "uid": "acb7f65d-78c1-4a1f-82c3-eeb1b4e8f965",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.16.0-rc",
+  "secs": 557,
+  "modes": "Loiter, Return to Land, Takeoff, Land, External 1"
+ },
+ {
+  "uid": "da686425-ceef-4b66-9d89-3a598555fe80",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "HKUST_NXT_DUAL",
+  "sw": "v1.16.0",
+  "secs": 216,
+  "modes": "Manual, Position, Offboard"
+ },
+ {
+  "uid": "edaa8f22-b52b-46ad-80fe-17ef6a12a240",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.16.0-rc",
+  "secs": 234,
+  "modes": "Loiter, Return to Land, Takeoff, Land, External 1"
+ },
+ {
+  "uid": "d560562c-5335-43f2-bc70-54a3a1eaa8bd",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_X7PRO",
+  "sw": "v1.16.1-rc",
+  "secs": 292,
+  "modes": "Mission, Loiter, Return to Land"
+ },
+ {
+  "uid": "977c9870-7c05-4951-a5a8-02db1e015647",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "YJ_YSV2",
+  "sw": "v1.16.0-rc",
+  "secs": 427,
+  "modes": "Altitude, Position, Loiter"
+ },
+ {
+  "uid": "0ce2bbee-c189-4a4d-965e-c5f233c0223e",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.16.0-rc",
+  "secs": 685,
+  "modes": "Takeoff, Loiter, Return to Land, External 1"
+ },
+ {
+  "uid": "3fd21c25-94a5-425c-a340-f14c0fe35756",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "YJ_YSV2",
+  "sw": "v1.16.0-rc",
+  "secs": 468,
+  "modes": "Altitude, Position, Loiter"
+ },
+ {
+  "uid": "f6591f05-7b14-4aad-9088-beec302362db",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6X",
+  "sw": "v1.15.4",
+  "secs": 667,
+  "modes": "Position, Mission"
+ },
+ {
+  "uid": "91a1030d-00a4-411f-92e7-a6c94d7462fe",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.15.4",
+  "secs": 283,
+  "modes": "Position"
+ },
+ {
+  "uid": "abf91aa7-69da-4138-a080-cc46d167b100",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CZI_CZ100PRO",
+  "sw": "v1.16.0",
+  "secs": 322,
+  "modes": "Position, Loiter"
+ },
+ {
+  "uid": "1511e511-a381-4b18-b4e7-4b090f82a98f",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6X",
+  "sw": "v1.15.4",
+  "secs": 484,
+  "modes": "Position, Mission"
+ },
+ {
+  "uid": "4d4ca894-1b77-4011-9284-ef38b70f3284",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6X",
+  "sw": "v1.15.4",
+  "secs": 292,
+  "modes": "Position"
+ },
+ {
+  "uid": "ce327d49-08ff-4c0c-8760-4da0eacf3941",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "WOLFPX_H743_SLIM",
+  "sw": "v1.12.3 (c30b15)",
+  "secs": 495,
+  "modes": "Manual, Land, Loiter, Offboard"
+ },
+ {
+  "uid": "fec14ae0-f49e-4d09-afc7-e4bad38d05b0",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V3",
+  "sw": "v1.12.3 (c679fb)",
+  "secs": 234,
+  "modes": "Land, Loiter, Offboard"
+ },
+ {
+  "uid": "aa023e62-771a-420d-9084-a85b6c0eccd6",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743",
+  "sw": "v1.16.2",
+  "secs": 189,
+  "modes": "Takeoff, Position, Altitude"
+ },
+ {
+  "uid": "b613ad70-b23a-41ec-8a77-6e7af09bdafb",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CORVON_743V1",
+  "sw": "v1.17.0",
+  "secs": 306,
+  "modes": "Position, Stabilized"
+ },
+ {
+  "uid": "0350cf11-ee83-4676-96a1-24e51e43cd5f",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 221,
+  "modes": "Land, Offboard"
+ },
+ {
+  "uid": "cbe948d0-073a-4374-bac8-a1a3c34f1aa7",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 221,
+  "modes": "Land, Offboard"
+ },
+ {
+  "uid": "9a0c1aea-2da5-49fa-bae7-a8fe601e4931",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 222,
+  "modes": "Land, Offboard"
+ },
+ {
+  "uid": "20ecf8ad-3edf-4ab0-9a37-0df3ca7bd1aa",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 230,
+  "modes": "Altitude, Land, Position, Offboard"
+ },
+ {
+  "uid": "628da12d-f948-4fcd-88a2-605251bec6fb",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CORVON_743V1",
+  "sw": "v1.17.0",
+  "secs": 306,
+  "modes": "Position, Stabilized"
+ },
+ {
+  "uid": "208f8d34-685e-4f65-b290-3d0a1dfc8280",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 222,
+  "modes": "Land, Offboard"
+ },
+ {
+  "uid": "8d16c183-42e0-495d-b0fe-ffe57455b145",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 230,
+  "modes": "Altitude, Land, Position, Offboard"
+ },
+ {
+  "uid": "2ecb44a7-8c7b-4886-a3dc-d19bdc720df0",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 221,
+  "modes": "Land, Offboard"
+ },
+ {
+  "uid": "47d31a5b-aa86-4fb2-855a-b2306b028c7c",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 936,
+  "modes": "Position, Mission, Loiter"
+ },
+ {
+  "uid": "2979e6aa-6f23-44dd-8d11-c7b892efbdcc",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 325,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "e8c10363-f997-4207-9d0f-d010448f10cf",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 325,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "0db9eedb-f2bc-4627-be0f-9fb7b7d7062a",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 356,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "f237cd6c-d2d2-465c-ae36-3532f926a04d",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 367,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "30456f12-a97a-4097-a593-522bb229d894",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 221,
+  "modes": "Land, Offboard"
+ },
+ {
+  "uid": "59c52118-a37a-4d24-b05c-5a84c0a7f38f",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.16.0",
+  "secs": 335,
+  "modes": "Position, Loiter, Return to Land, Offboard"
+ },
+ {
+  "uid": "f76d34cb-eeca-4a9a-8711-1dba3bb9c499",
+  "vehicle": "Quadrotor",
+  "airframe": 4011,
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.13.3 (a9564d)",
+  "secs": 231,
+  "modes": "Position, Land, Offboard"
+ },
+ {
+  "uid": "2f711207-3d1b-4f53-bae8-35f3607a43c2",
+  "vehicle": "Quadrotor",
+  "airframe": 4011,
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.13.3 (a9564d)",
+  "secs": 229,
+  "modes": "Position, Land, Offboard"
+ },
+ {
+  "uid": "c580bbef-f08c-4c45-80f6-212537ed852f",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CONSYS_2536B",
+  "sw": "v117.16.5 (1653c1)",
+  "secs": 811,
+  "modes": ""
+ },
+ {
+  "uid": "29939265-7add-47e0-8c67-48c5bff2f03c",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_NORA",
+  "sw": "v1.14.4 (1555f2)",
+  "secs": 187,
+  "modes": "Position"
+ },
+ {
+  "uid": "ea5bafb9-0ed8-4126-bc8b-523efce2e314",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 221,
+  "modes": "Land, Offboard"
+ },
+ {
+  "uid": "17d1cacd-a77b-4a1e-a71a-e6f7c9119290",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CONSYS_2536B",
+  "sw": "v117.16.5 (1653c1)",
+  "secs": 237,
+  "modes": ""
+ },
+ {
+  "uid": "a39c3a00-deaf-48c5-8231-8fd900d28a53",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 330,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "61592e33-46fa-4074-88df-d9ee04af5cfb",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 325,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "7d682644-bde7-4e2e-9553-cd137516a1bc",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 358,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "0bb6aa11-98be-4249-ac00-0e7adebb07ab",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 379,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "71eb20f0-7949-43d8-9554-a0d7e9c2c3ee",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 367,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "95803c0a-2e67-4763-aba4-5917161ef3b5",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 330,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "219ed4a1-4a39-4b4b-9c8e-e682d68ecc0f",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 325,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "0d3a4164-9a11-42c1-ae99-521308c5f6c0",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 356,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "19acea24-195d-4bf4-946d-0aa1409f4cc5",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_OSIRISGEN2",
+  "sw": "v1.14.3 (78d19b)",
+  "secs": 367,
+  "modes": "Offboard"
+ },
+ {
+  "uid": "5406bc71-c3fd-49f6-bcd2-c3c1ebefc508",
+  "vehicle": "Quadrotor",
+  "airframe": 4022,
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.12.6 (b620a4)",
+  "secs": 976,
+  "modes": "Takeoff, Position, Loiter, Altitude"
+ },
+ {
+  "uid": "1a80b62a-d64d-4562-8aad-5239191f9b60",
+  "vehicle": "Quadrotor",
+  "airframe": 4022,
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.12.6 (b620a4)",
+  "secs": 519,
+  "modes": "Altitude, Position, Loiter, Return to Land, Takeoff"
+ },
+ {
+  "uid": "af639fc4-91af-452b-9b53-c6ca2d6674ea",
+  "vehicle": "Quadrotor",
+  "airframe": 4998,
+  "hw": "PX4_FMU_V4",
+  "sw": "v1.14.0 (c57f6f)",
+  "secs": 824,
+  "modes": "Takeoff, Land, Loiter, Offboard"
+ },
+ {
+  "uid": "e4092508-4540-4a23-831b-000ee44d9935",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "3DR_CTRL_N1",
+  "sw": "v1.18.0-beta",
+  "secs": 776,
+  "modes": "Position"
+ },
+ {
+  "uid": "3d791d95-cc81-4786-93bc-8a7b2fefe01a",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "3DR_CTRL_N1",
+  "sw": "v1.18.0-beta",
+  "secs": 289,
+  "modes": "Position"
+ },
+ {
+  "uid": "efa8b987-9f0f-40b7-9b0e-20edbab5e1b1",
+  "vehicle": "Quadrotor",
+  "airframe": 4011,
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.13.3 (a9564d)",
+  "secs": 232,
+  "modes": "Position, Land, Offboard"
+ },
+ {
+  "uid": "d82fee55-8331-4139-9d3d-35b3d97ee969",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 215,
+  "modes": "Loiter"
+ },
+ {
+  "uid": "6a5e670e-4910-4496-8a2d-61705ff28023",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 466,
+  "modes": "Loiter"
+ },
+ {
+  "uid": "17ee90e4-6101-492a-8a6b-ada814a4fee3",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "HKUST_NXT_DUAL",
+  "sw": "v1.16.1-rc",
+  "secs": 352,
+  "modes": "Stabilized"
+ },
+ {
+  "uid": "0c7780bd-887f-4835-bc0f-022b402417cc",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "HKUST_NXT_DUAL",
+  "sw": "v1.16.1-rc",
+  "secs": 352,
+  "modes": "Stabilized"
+ },
+ {
+  "uid": "186e8634-bf2f-4dba-987f-71bb91fb1ed5",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic 250 Racer",
+  "hw": "AIRMIND_MINDPX_V2",
+  "sw": "v1.18.0-rc",
+  "secs": 185,
+  "modes": "Loiter"
+ },
+ {
+  "uid": "b44c2b12-6bfc-4c2e-8d96-25cbf5deec75",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "HKUST_NXT_DUAL",
+  "sw": "v1.16.1-rc",
+  "secs": 352,
+  "modes": "Stabilized"
+ },
+ {
+  "uid": "5770e905-7fc0-45d6-8d9a-f06e69ab095d",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_X7PRO",
+  "sw": "v1.9.0 (a84a11)",
+  "secs": 230,
+  "modes": "Altitude, Position, Mission, Loiter"
+ },
+ {
+  "uid": "c33c969b-322a-4d5e-afd0-96f3b9b9ae46",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_X7PRO",
+  "sw": "v1.16.1-rc",
+  "secs": 323,
+  "modes": "Position, Mission, Return to Land"
+ },
+ {
+  "uid": "c60e5909-1f5d-47a9-b4fa-5331fa989ca9",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_X7PRO",
+  "sw": "v1.16.1-rc",
+  "secs": 295,
+  "modes": "Position, Mission, Return to Land"
+ },
+ {
+  "uid": "2f159c6a-a25a-4399-a624-da09e9c8f281",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_X7PRO",
+  "sw": "v1.16.1-rc",
+  "secs": 445,
+  "modes": "Mission, Loiter, Return to Land"
+ },
+ {
+  "uid": "347f872d-7f7c-4967-8b22-1eb912ea9f2d",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_X7PRO",
+  "sw": "v1.16.1-rc",
+  "secs": 268,
+  "modes": "Position, Mission, Return to Land"
+ },
+ {
+  "uid": "bd31dfe8-8f22-4e69-a011-9cc43bdf56da",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_X7PRO",
+  "sw": "v1.16.1-rc",
+  "secs": 279,
+  "modes": "Position, Mission, Loiter, Return to Land"
+ },
+ {
+  "uid": "5624c96d-11fc-4b80-abfc-ac71e74b39f9",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 430,
+  "modes": "Loiter"
+ },
+ {
+  "uid": "0f683583-5a4b-4883-99a8-51c9f7c4b7d7",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "HKUST_NXT_DUAL",
+  "sw": "v1.14.0 (5ba2e9)",
+  "secs": 440,
+  "modes": "Altitude, Position, Stabilized"
+ },
+ {
+  "uid": "0e343359-dc06-4963-875d-e061410dd20f",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_NORA",
+  "sw": "v1.14.4 (1555f2)",
+  "secs": 335,
+  "modes": "Mission, Loiter, Return to Land"
+ },
+ {
+  "uid": "2a7d3156-d02c-455c-8859-a68d50afc149",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6X",
+  "sw": "v1.15.4 (99c404)",
+  "secs": 651,
+  "modes": "Altitude, Position, Mission, Return to Land"
+ },
+ {
+  "uid": "f51459ef-b790-4459-a92e-21eb512ddc9a",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6X",
+  "sw": "v1.15.4 (99c404)",
+  "secs": 651,
+  "modes": "Altitude, Position, Mission, Return to Land"
+ },
+ {
+  "uid": "b3988e0d-efef-4066-9a5b-157aac96d325",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.15.4",
+  "secs": 618,
+  "modes": "Position"
+ },
+ {
+  "uid": "d9ad4d48-42c2-41b0-90c9-001bbaa36150",
+  "vehicle": "Quadrotor",
+  "airframe": 4998,
+  "hw": "PX4_FMU_V4",
+  "sw": "v1.14.0 (c57f6f)",
+  "secs": 702,
+  "modes": "Takeoff, Land, Loiter, Offboard"
+ },
+ {
+  "uid": "5da1364d-1452-4629-b8fb-f3eae5ec1035",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.15.1",
+  "secs": 259,
+  "modes": "Position"
+ },
+ {
+  "uid": "9c562d27-f430-4e60-848d-d62e50592e3f",
+  "vehicle": "Quadrotor",
+  "airframe": "Holybro X500 V2",
+  "hw": "PX4_FMU_V6X",
+  "sw": "v1.17.0-beta",
+  "secs": 370,
+  "modes": "External 2, Takeoff, External 3, External 1"
+ },
+ {
+  "uid": "48deeb48-1343-45ef-a248-ac4305dee181",
+  "vehicle": "Quadrotor",
+  "airframe": "Holybro X500 V2",
+  "hw": "PX4_FMU_V6X",
+  "sw": "v1.17.0-beta",
+  "secs": 398,
+  "modes": "External 2, Takeoff, External 3, External 1"
+ },
+ {
+  "uid": "d127354f-d472-450a-846c-34cd19a6e6f5",
+  "vehicle": "Quadrotor",
+  "airframe": "Holybro X500 V2",
+  "hw": "PX4_FMU_V6X",
+  "sw": "v1.17.0-beta",
+  "secs": 384,
+  "modes": "External 2, Takeoff, External 3, External 1"
+ },
+ {
+  "uid": "1cec95d6-10da-4da6-a460-d37281e0d255",
+  "vehicle": "Quadrotor",
+  "airframe": "Holybro X500 V2",
+  "hw": "PX4_FMU_V6X",
+  "sw": "v1.17.0-beta",
+  "secs": 396,
+  "modes": "External 2, Takeoff, External 3, External 1"
+ },
+ {
+  "uid": "f1a83c96-dd59-4812-8ad0-a332550c9b8a",
+  "vehicle": "Quadrotor",
+  "airframe": "HolyBro QAV250",
+  "hw": "CUBEPILOT_CUBEORANGE",
+  "sw": "v1.12.3 (c679fb)",
+  "secs": 276,
+  "modes": "Loiter, Offboard"
+ },
+ {
+  "uid": "734ff23c-e1cf-43b9-a0b6-1eeabc2500ce",
+  "vehicle": "Quadrotor",
+  "airframe": "HolyBro QAV250",
+  "hw": "CUBEPILOT_CUBEORANGE",
+  "sw": "v1.12.3 (c679fb)",
+  "secs": 276,
+  "modes": "Loiter, Offboard"
+ },
+ {
+  "uid": "45335a22-c3ea-4edb-897f-aa95f90d8a47",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "3DR_CTRL_N1",
+  "sw": "v1.18.0-beta",
+  "secs": 856,
+  "modes": "Position"
+ },
+ {
+  "uid": "2dea0016-15d5-4c6a-8e2a-e1898df5540f",
+  "vehicle": "Quadrotor",
+  "airframe": "HolyBro QAV250",
+  "hw": "CUBEPILOT_CUBEORANGE",
+  "sw": "v1.12.3 (c679fb)",
+  "secs": 276,
+  "modes": "Loiter, Offboard"
+ },
+ {
+  "uid": "77cd5581-5dde-4aa2-99f4-8d9aa2d71944",
+  "vehicle": "Quadrotor",
+  "airframe": "NXP HoverGames",
+  "hw": "NXP_IMX95",
+  "sw": "v1.17.0-alpha",
+  "secs": 572,
+  "modes": "Mission, Loiter, Return to Land, Position (Slow), Stabilized"
+ },
+ {
+  "uid": "c5638139-2e3f-4cc4-b701-3c3c9b34275d",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_7_NANO",
+  "sw": "v1.17.0",
+  "secs": 248,
+  "modes": "Stabilized"
+ },
+ {
+  "uid": "2fc312ad-ab0d-4348-b053-d48ea14276b7",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "ARK_FPV",
+  "sw": "v1.17.0",
+  "secs": 212,
+  "modes": "Altitude, Position, Stabilized"
+ },
+ {
+  "uid": "ba7a8a39-d7e4-4f4e-bda6-e020ca156dcc",
+  "vehicle": "Quadrotor",
+  "airframe": 4011,
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.13.3 (a9564d)",
+  "secs": 291,
+  "modes": "Altitude, Position, Land, Offboard"
+ },
+ {
+  "uid": "47e7e9a6-1ddf-4837-bafe-de57145f1ca1",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_7_NANO",
+  "sw": "v1.17.0",
+  "secs": 248,
+  "modes": "Stabilized"
+ },
+ {
+  "uid": "a5d96bbf-b96b-4c1b-b537-a6a2c972c775",
+  "vehicle": "Quadrotor",
+  "airframe": "HIL Quadcopter X",
+  "hw": "PX4_FMU_V6X",
+  "sw": "v1.13.2",
+  "secs": 415,
+  "modes": "Land, Loiter, Terminate, Offboard"
+ },
+ {
+  "uid": "435a91fb-8bdd-4713-a1fa-34684ac0af89",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_7_NANO",
+  "sw": "v1.17.0 (d6e8f4)",
+  "secs": 330,
+  "modes": "Mission, Loiter, Return to Land, Stabilized, External 1"
+ },
+ {
+  "uid": "546d1bda-54f7-4819-af52-7481b4e36d47",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.15.4 (fdaac4)",
+  "secs": 269,
+  "modes": "Position, Land, Loiter, Return to Land"
+ },
+ {
+  "uid": "54970e6c-728f-4a1e-9a87-c96501fc0eff",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.24.0 (e2ec6d)",
+  "secs": 193,
+  "modes": "Altitude, Position, Return to Land, Takeoff, Follow Target"
+ },
+ {
+  "uid": "c0ab3f4d-103b-4ece-8e58-6d265f8cb435",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V5",
+  "sw": "v1.15.4 (cb5b3a)",
+  "secs": 302,
+  "modes": "Position, Mission, Loiter, Offboard, Land"
+ },
+ {
+  "uid": "98e8cb8c-90ae-4cd6-941f-9ef79b028a8d",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_FMU_V6X",
+  "sw": "v1.17.0",
+  "secs": 390,
+  "modes": "Stabilized"
+ },
+ {
+  "uid": "45cf09fe-3d87-405d-8d3b-80499a2e9619",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V5",
+  "sw": "v1.15.4 (cb5b3a)",
+  "secs": 297,
+  "modes": "Land, Mission, Loiter, Offboard"
+ },
+ {
+  "uid": "0a9d5002-93b2-4e8c-b03d-6eeb0c7af5f4",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.24.0 (e2ec6d)",
+  "secs": 459,
+  "modes": "Altitude, Position, Return to Land, Takeoff, Follow Target"
+ },
+ {
+  "uid": "1ad034a6-cf31-4f54-b854-fa9aa40b936c",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 233,
+  "modes": "Altitude, Position, Stabilized"
+ },
+ {
+  "uid": "ce3d3a20-58ad-406b-aaea-5a5e9a2104ec",
+  "vehicle": "Quadrotor",
+  "airframe": 5206,
+  "hw": "INDOWINGS_CYBERONE_MAX",
+  "sw": "v1.12.3 (81c078)",
+  "secs": 560,
+  "modes": "Position"
+ },
+ {
+  "uid": "b3c6a993-a6bf-4294-addf-9aae8f837bf5",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUAV_7_NANO",
+  "sw": "v1.17.0 (95078b)",
+  "secs": 200,
+  "modes": "Position"
+ },
+ {
+  "uid": "d7f73d5e-93d0-46e0-a9d0-946a0a62f837",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.24.0",
+  "secs": 207,
+  "modes": "Altitude, Position, Return to Land, Offboard, Takeoff, Follow Target"
+ },
+ {
+  "uid": "1f3f7f76-4da5-4b7b-9b4d-a8a715487392",
+  "vehicle": "Quadrotor",
+  "airframe": "S500 Generic",
+  "hw": "AMOVLAB_ICF6",
+  "sw": "v1.15.4 (f2b313)",
+  "secs": 349,
+  "modes": "Loiter"
+ },
+ {
+  "uid": "25cd063d-44cc-4135-a1e5-05c8afe28e67",
+  "vehicle": "Quadrotor",
+  "airframe": "S500 Generic",
+  "hw": "AMOVLAB_ICF6",
+  "sw": "v1.15.4 (f2b313)",
+  "secs": 349,
+  "modes": "Loiter"
+ },
+ {
+  "uid": "dee6339a-072b-481e-b90c-90bd8b500d70",
+  "vehicle": "Quadrotor",
+  "airframe": "S500 Generic",
+  "hw": "AMOVLAB_ICF6",
+  "sw": "v1.15.4 (f2b313)",
+  "secs": 180,
+  "modes": "Position"
+ },
+ {
+  "uid": "0affe0b1-1898-4208-8bae-b7032b27af87",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "HUMPBACK_POWERFIN",
+  "sw": "v1.18.0-beta",
+  "secs": 217,
+  "modes": "Altitude, Position"
+ },
+ {
+  "uid": "25eee4b0-5ddd-411e-8670-2e9cf62696bc",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "HKUST_NXT_DUAL",
+  "sw": "v1.17.0",
+  "secs": 212,
+  "modes": "Altitude, Position, Stabilized"
+ },
+ {
+  "uid": "5eb53547-d7c2-47bf-ba07-aabab36989d9",
+  "vehicle": "Quadrotor",
+  "airframe": "Holybro X500 V2",
+  "hw": "CUBEPILOT_CUBEORANGEPLUS",
+  "sw": "v1.15.0",
+  "secs": 346,
+  "modes": "Altitude, Stabilized"
+ },
+ {
+  "uid": "d4380f00-f3ea-4b06-8199-23283d8acc82",
+  "vehicle": "Quadrotor",
+  "airframe": "Holybro X500 V2",
+  "hw": "CUBEPILOT_CUBEORANGEPLUS",
+  "sw": "v1.15.0",
+  "secs": 205,
+  "modes": "Altitude, Stabilized"
+ },
+ {
+  "uid": "d90ff7af-41f5-4d50-b8a1-f51d9ef2a88b",
+  "vehicle": "Quadrotor",
+  "airframe": "Holybro X500 V2",
+  "hw": "CUBEPILOT_CUBEORANGEPLUS",
+  "sw": "v1.15.0",
+  "secs": 346,
+  "modes": "Altitude, Stabilized"
+ },
+ {
+  "uid": "d2c5e419-c388-4393-aee7-c37770b92cd2",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "CUBEPILOT_CUBEORANGEPLUS",
+  "sw": "v1.17.0",
+  "secs": 187,
+  "modes": "Altitude, Position"
+ },
+ {
+  "uid": "dab8388f-48ff-484f-a453-f6bc3c268218",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.17.0",
+  "secs": 338,
+  "modes": "Takeoff, Loiter, Offboard"
+ },
+ {
+  "uid": "0d685240-1f74-4895-88d7-2ae1f0d2cca1",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "ARK_FMU_V6X",
+  "sw": "v1.16.2 (26bcee)",
+  "secs": 781,
+  "modes": "Position, Mission, Descend"
+ },
+ {
+  "uid": "73513a42-ca33-4642-afef-ff592005b539",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.15.4 (99c404)",
+  "secs": 830,
+  "modes": "Position, Mission, External 1"
+ },
+ {
+  "uid": "159534eb-9a8e-4585-b58d-64acb4bc4009",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.24.0 (121065)",
+  "secs": 207,
+  "modes": "Altitude, Position, Return to Land, Takeoff, Follow Target"
+ },
+ {
+  "uid": "974badff-b4b5-457c-a6b6-2a0953c808b6",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.16.0-rc",
+  "secs": 445,
+  "modes": "Takeoff, Loiter, Return to Land, External 1"
+ },
+ {
+  "uid": "400f61ee-3b94-4e67-9f36-c62c24b0af2b",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.16.0-rc",
+  "secs": 445,
+  "modes": "Takeoff, Loiter, Return to Land, External 1"
+ },
+ {
+  "uid": "f4237e9e-37ef-4400-a1a4-22c05b49df33",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.24.0 (d6edfd)",
+  "secs": 241,
+  "modes": "Altitude, Position, Return to Land, Offboard, Takeoff, Follow Target"
+ },
+ {
+  "uid": "69a05dde-0f82-4c55-98f8-468f396f62a8",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.24.0 (d6edfd)",
+  "secs": 241,
+  "modes": "Altitude, Position, Return to Land, Offboard, Takeoff, Follow Target"
+ },
+ {
+  "uid": "dfe7b3f8-4d55-46b6-bfb1-c79cee4693d4",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.24.0 (121065)",
+  "secs": 207,
+  "modes": "Altitude, Position, Return to Land, Takeoff, Follow Target"
+ },
+ {
+  "uid": "1d291b80-2471-4108-a49f-deab07b77bd0",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "MICOAIR_H743_V2",
+  "sw": "v1.16.0-rc",
+  "secs": 705,
+  "modes": "Takeoff, Land, Loiter, External 1"
+ },
+ {
+  "uid": "67629c53-733a-4835-8765-dd778b8d06c3",
+  "vehicle": "Quadrotor",
+  "airframe": "Generic Quadcopter",
+  "hw": "PX4_FMU_V5",
+  "sw": "v1.12.6 (14beae)",
+  "secs": 241,
+  "modes": "Position"
+ },
+ {
+  "uid": "67341ca5-2d98-4022-8ba3-5e590a3ce803",
+  "vehicle": "Quadrotor",
+  "airframe": 4011,
+  "hw": "PX4_FMU_V6C",
+  "sw": "v1.13.3 (a9564d)",
+  "secs": 276,
+  "modes": "Position, Land, Offboard"
+ }
+]

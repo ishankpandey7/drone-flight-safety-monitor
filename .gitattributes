@@ -1,0 +1,8 @@
+# Text files repo me hamesha LF me rahein, checkout pe OS ke hisaab se aayein.
+* text=auto eol=lf
+
+# Binary --- inhe git kabhi convert na kare
+*.png  binary
+*.npz  binary
+*.pt   binary
+*.ulg  binary

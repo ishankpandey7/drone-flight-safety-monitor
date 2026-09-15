@@ -1,0 +1,39 @@
+# ============================================================ data
+# Ye sab regenerate ho sakta hai (`python run_all.py`) ya third-party
+# download hai. Repo me sirf CODE aur RESULTS jaate hain, gigabytes nahi.
+
+# simulator ka dataset (~169 MB) -- generate_dataset.py banata hai
+data/processed/
+
+# demo flights ki CSV (~7.6 MB) -- simulator.py banata hai
+data/raw/
+
+# CMU ALFA dataset (~44 MB) -- alfa_data.py download karta hai
+data/alfa/
+
+# asli PX4 logs (~1.3 GB) -- px4_build.py dobara laa sakta hai
+data/px4/*.ulg
+
+# unse bana dataset (~31 MB) -- px4_build.py banata hai
+data/px4/*.npz
+
+# NOTE: data/px4/candidates.json aur data/px4/real_meta.json JAAN BOOJH KAR
+# tracked hain -- unke bina px4_build.py dobara wahi 37 flights nahi la sakta.
+
+# ============================================================ python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ============================================================ tooling
+.vercel
+node_modules/
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
