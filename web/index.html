@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drone Flight Safety Monitor — crash se pehle fault detection</title>
+<meta name="description" content="Drone telemetry se crash HONE SE PEHLE motor/battery/sensor failure pakadna. Median 11.4 second warning, zero neural networks. Real PX4 aur CMU ALFA logs pe validated.">
+<meta property="og:title" content="Drone Flight Safety Monitor">
+<meta property="og:description" content="Median 11.4s warning before crash. Zero neural networks. Validated on real UAV logs.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --bg:#070b12; --bg2:#0c121c; --card:#111925; --line:#1e2a3a;
+    --fg:#e8eef7; --dim:#8da2bd; --dimmer:#63789a;
+    --accent:#ffb020; --accent2:#3dd6c4; --bad:#ff5c5c; --good:#4ade80;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);
+    line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:86px 0 64px;
+    background:
+      radial-gradient(900px 380px at 15% -10%, rgba(255,176,32,.13), transparent 60%),
+      radial-gradient(700px 340px at 88% 4%, rgba(61,214,196,.10), transparent 62%),
+      linear-gradient(180deg,#070b12,#0b1017);
+    border-bottom:1px solid var(--line);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.32;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),
+                     linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:46px 46px;
+    mask-image:radial-gradient(circle at 50% 0%,#000 0%,transparent 72%);
+    -webkit-mask-image:radial-gradient(circle at 50% 0%,#000 0%,transparent 72%);
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);border:1px solid rgba(255,176,32,.32);
+    background:rgba(255,176,32,.07);
+    padding:6px 13px;border-radius:999px;margin-bottom:26px;
+  }
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);
+       box-shadow:0 0 0 0 rgba(255,176,32,.6);animation:pulse 2.2s infinite}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(255,176,32,.55)}
+    70%{box-shadow:0 0 0 9px rgba(255,176,32,0)}
+    100%{box-shadow:0 0 0 0 rgba(255,176,32,0)}
+  }
+  h1{
+    font-size:clamp(2.1rem,5.6vw,3.7rem);line-height:1.06;margin:0 0 20px;
+    letter-spacing:-.025em;font-weight:760;
+  }
+  h1 .hl{
+    background:linear-gradient(120deg,var(--accent),#ffd479);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{font-size:clamp(1.02rem,2.1vw,1.2rem);color:var(--dim);max-width:60ch;margin:0 0 34px}
+  .lede b{color:var(--fg);font-weight:620}
+
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:46px}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:12px 21px;border-radius:10px;text-decoration:none;
+    font-weight:610;font-size:.94rem;border:1px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:#11151c;box-shadow:0 8px 26px -10px rgba(255,176,32,.75)}
+  .btn-primary:hover{background:#ffc247}
+  .btn-ghost{border-color:var(--line);color:var(--fg);background:rgba(255,255,255,.028)}
+  .btn-ghost:hover{border-color:#31415a;background:rgba(255,255,255,.055)}
+
+  /* ---------- stat strip ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;
+         background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .stat{background:var(--bg2);padding:22px 20px}
+  .stat .n{font-family:var(--mono);font-size:clamp(1.55rem,3.6vw,2.15rem);
+           font-weight:700;letter-spacing:-.02em;color:var(--accent);line-height:1.1}
+  .stat .n.teal{color:var(--accent2)}
+  .stat .l{font-size:.795rem;color:var(--dim);margin-top:7px;line-height:1.45}
+
+  /* ---------- sections ---------- */
+  section{padding:74px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(1.5rem,3.1vw,2.05rem);margin:0 0 14px;letter-spacing:-.018em;font-weight:720}
+  .sub{color:var(--dim);max-width:66ch;margin:0 0 34px}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;
+          color:var(--accent2);margin-bottom:11px}
+
+  figure{margin:0}
+  .shot{
+    border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fff;
+    box-shadow:0 22px 56px -30px rgba(0,0,0,.95);
+  }
+  .shot img{display:block;width:100%;height:auto}
+  figcaption{color:var(--dim);font-size:.85rem;margin-top:13px;text-align:center}
+
+  /* ---------- cards ---------- */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:17px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:13px;padding:24px;
+    transition:border-color .18s ease, transform .18s ease;
+  }
+  .card:hover{border-color:#31415a;transform:translateY(-3px)}
+  .card h3{margin:0 0 6px;font-size:1.06rem;letter-spacing:-.01em}
+  .card .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+             color:var(--dim);display:block;margin-bottom:13px}
+  .card p{color:var(--dim);font-size:.9rem;margin:0 0 15px}
+  .kv{display:flex;justify-content:space-between;gap:12px;
+      padding:8px 0;border-top:1px solid var(--line);font-size:.87rem}
+  .kv span:first-child{color:var(--dim)}
+  .kv span:last-child{font-family:var(--mono);font-weight:640}
+  .ok{color:var(--good)} .warn{color:var(--accent)} .no{color:var(--bad)}
+
+  /* ---------- findings ---------- */
+  .find{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .f{background:var(--bg2);border:1px solid var(--line);border-left:2px solid var(--accent);
+     border-radius:0 11px 11px 0;padding:20px 22px}
+  .f h4{margin:0 0 7px;font-size:.99rem;letter-spacing:-.01em}
+  .f p{margin:0;color:var(--dim);font-size:.885rem}
+  .f.teal{border-left-color:var(--accent2)}
+  .f.red{border-left-color:var(--bad)}
+
+  /* ---------- limits ---------- */
+  .limits{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:8px 26px}
+  .limits li{padding:15px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:.91rem}
+  .limits li:last-child{border-bottom:0}
+  .limits li b{color:var(--fg);font-weight:620}
+  .limits ul{list-style:none;padding:0;margin:0}
+
+  code{font-family:var(--mono);font-size:.87em;background:rgba(255,255,255,.07);
+       padding:2px 6px;border-radius:5px;color:#ffd479}
+
+  footer{padding:52px 0 64px;color:var(--dim);font-size:.875rem}
+  footer a{color:var(--accent2);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .fnote{margin-top:14px;font-size:.83rem;color:var(--dimmer)}
+
+  @media(max-width:640px){
+    .hero{padding:60px 0 46px}
+    section{padding:54px 0}
+    .cta{flex-direction:column;align-items:stretch}
+    .btn{justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Fault detection before impact</div>
+    <h1>Drone girne se pehle<br><span class="hl">chillata hai.</span></h1>
+    <p class="lede">
+      Motor ka current badhta hai, vibration ka pattern badalta hai, ek motor baaki
+      teeno se zyada khinchta hai. Insaan ye 50 Hz ke 19 channels me nahi dekh sakta.
+      <b>Model dekh sakta hai — aur crash se median 11.4 second pehle dekh leta hai.</b>
+    </p>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="dashboard.html">▶ Interactive flight replay</a>
+      <a class="btn btn-ghost" href="https://github.com/ishankpandey7/drone-flight-safety-monitor" target="_blank" rel="noopener">Source on GitHub →</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">11.4s</div><div class="l">median warning, crash se pehle</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">crashes me alarm pehle baja</div></div>
+      <div class="stat"><div class="n teal">0</div><div class="l">neural networks istemaal hue</div></div>
+      <div class="stat"><div class="n teal">1.7s</div><div class="l">naive PWM baseline deta tha</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Asli sawaal</div>
+    <h2>"Kitna accurate hai" galat sawaal hai.</h2>
+    <p class="sub">
+      Fault pakadna aasan hai jab drone already gir raha ho. Kaam ki baat ye hai ki
+      <b>kitne second pehle</b> pata chala. Isliye recall nahi, <b>lead time</b> naapa —
+      alarm bajne se crash tak kitna waqt mila. Test set me 60 me se 53 faulty flights
+      sach me crash hui; fault shuru hone se crash tak average 20 second the.
+    </p>
+
+    <figure>
+      <div class="shot"><img src="img/04_multiscale.png" alt="Do timescale detector ka result" loading="lazy"></div>
+      <figcaption>Best system: do Mahalanobis detectors, do timescale pe (8s + 2s window), dono ka OR, joint threshold calibration.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Teen jagah imtihaan</div>
+    <h2>Simulator me chalna kaafi nahi hota.</h2>
+    <p class="sub">
+      Isliye teen alag jagah test kiya — apna simulator, asli PX4 public logs, aur CMU ALFA
+      (asli UAV, labelled fault onset). Har jagah ka nateeja alag kahani kehta hai.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Apna quadcopter simulator</span>
+        <h3>Poora control, asli physics</h3>
+        <p>Physics + PID autopilot. Faults crash tak badhte hain, aur crash ke baad ka data evaluation me nahi ginta.</p>
+        <div class="kv"><span>Recall</span><span class="ok">100%</span></div>
+        <div class="kv"><span>Median warning</span><span class="ok">11.4 s</span></div>
+        <div class="kv"><span>5+ sec mile</span><span class="ok">83% crashes</span></div>
+        <div class="kv"><span>Worst 25%</span><span class="warn">5.8 s</span></div>
+      </div>
+
+      <div class="card">
+        <span class="tag">Asli PX4 logs · 37 flights</span>
+        <h3>Model transfer nahi hota</h3>
+        <p>Simulator pe fit kiya model asli logs pe 100% alarm bajata hai — distributions overlap tak nahi karte. Par <i>tareeka</i> transfer hota hai.</p>
+        <div class="kv"><span>Sim model → asli</span><span class="no">100% alarm (fail)</span></div>
+        <div class="kv"><span>Cross-vehicle fit</span><span class="warn">10.8%</span></div>
+        <div class="kv"><span>Per-drone calibration</span><span class="ok">5.4%</span></div>
+        <div class="kv"><span>Alag drones</span><span>23</span></div>
+      </div>
+
+      <div class="card">
+        <span class="tag">CMU ALFA · labelled onset</span>
+        <h3>Asli fault, asli hardware</h3>
+        <p>Pehli baar ground truth ke saath imtihaan — asli UAV, engine aur control-surface failures, onset ka waqt labelled.</p>
+        <div class="kv"><span>Recall</span><span class="ok">94%</span></div>
+        <div class="kv"><span>Detection delay</span><span class="ok">5.3 s</span></div>
+        <div class="kv"><span>False alarm</span><span class="warn">9.3%</span></div>
+        <div class="kv"><span>Airframe</span><span class="no">fixed-wing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Jo seekhne ko mila</div>
+    <h2>Zyada tar sudhaar model se nahi aaya.</h2>
+    <p class="sub">Paanch approach try kiye — Mahalanobis baseline, LSTM autoencoder, LSTM forecaster, hybrid, aur multi-timescale. Jo jeeta wo sabse simple tha.</p>
+
+    <div class="find">
+      <div class="f">
+        <h4>Purani statistics abhi bhi barabar khadi hai</h4>
+        <p>Mahalanobis — koi neural network nahi, bas window ka mean/std aur covariance — 74% crashes me 5+ second deta hai. Sabse accha neural model 72%.</p>
+      </div>
+      <div class="f red">
+        <h4>Autoencoder is kaam ke liye galat aujaar hai</h4>
+        <p>Usse input <i>dobara banana</i> hota hai — jawab uske saamne rakha hota hai, wo copy kar deta hai. 81% recall, 12% false alarm. Wahi model jab agla pal <i>predict</i> karne laga to 98% / 0% ho gaya.</p>
+      </div>
+      <div class="f teal">
+        <h4>Naapna theek karna model badalne se zyada zaroori hai</h4>
+        <p>Validation set 25 se 100 flights karne se recall 45% → 77% ho gayi — code me ek line badle bina.</p>
+      </div>
+      <div class="f">
+        <h4>Sabse bada sudhaar DESIGN se aaya</h4>
+        <p>8s window ka matlab tha ki tez faults 8 second tak dikhte hi nahi. Doosra 2s detector jodne se wo limit hat gayi — naya model nahi, nayi soch.</p>
+      </div>
+      <div class="f teal">
+        <h4>Median dhoka deta hai</h4>
+        <p>11.4s sunne me achha lagta hai, par p25 sirf 5.8s hai aur ek flight ko 0.7s mile. Safety me worst case maayne rakhta hai.</p>
+      </div>
+      <div class="f red">
+        <h4>Ek claim maine kiya aur galat nikla</h4>
+        <p>Maine likha tha <code>imu_drift</code> telemetry se pakda hi nahi ja sakta. Ab wo 100% recall pe hai. Wo undetectable nahi tha — maine use itna halka banaya tha ki pakadne layak kuch tha hi nahi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Fault ka nishaan</div>
+    <h2>Chaar fault, chaar alag zubaan.</h2>
+    <p class="sub">Har fault telemetry me alag tarah bolta hai — isliye ek hi detector sab pe kaam nahi karta, aur yahi multi-timescale design ki wajah bani.</p>
+    <figure>
+      <div class="shot"><img src="img/01_fault_signature.png" alt="Fault signature telemetry me" loading="lazy"></div>
+      <figcaption>Healthy vs faulty flight — dono ka seed ek hi hai, isliye fault se pehle ka hissa bilkul same hai.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Imaandari</div>
+    <h2>Jo abhi saabit nahi hua.</h2>
+    <p class="sub">Ye hissa isliye likha hai kyunki iske bina upar ke numbers se galat matlab nikalta hai.</p>
+    <div class="limits">
+      <ul>
+        <li><b>Quad-specific hissa abhi bhi sirf simulator me test hua hai.</b> Chaar motors ka aapsi rishta — is project ka sabse khaas idea — asli quadcopter pe kabhi nahi jaancha gaya. ALFA ne asli fault to diye, par wo <b>fixed-wing</b> hai.</li>
+        <li><b>Asli PX4 logs me ground truth nahi hai.</b> Wahan sirf "chup rehna" naapa gaya — yaani healthy flight pe alarm nahi bajta. Ye saabit nahi karta ki asli marta hua motor pakda jaayega.</li>
+        <li><b>Simulator mera apna hai.</b> Usme wahi physics hai jo maine likhi. Agar meri physics galat hai, to detector usi galti pe accha kaam kar raha hoga.</li>
+        <li><b>Worst case abhi bhi kamzor hai.</b> Ek flight ko sirf 0.7 second mile. Asli product me is number pe design karna padta, median pe nahi.</li>
+        <li><b>Aage ka kaam:</b> RflyMAD jaise dataset — 497 asli quadcopter flights, motor aur propeller faults, ULog format me labelled onset ke saath.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>
+      Seekhne ke liye banaya gaya project — idea VIT Gravitas "Code Cortex" se aaya tha,
+      par ye kisi competition me submit nahi hua. Poora method, code aur imaandar
+      limitations <a href="https://github.com/ishankpandey7/drone-flight-safety-monitor" target="_blank" rel="noopener">GitHub repo</a> me hain.
+    </p>
+    <p class="fnote">
+      MIT License · Built by <a href="https://github.com/ishankpandey7" target="_blank" rel="noopener">Ishank Pandey</a>
+      · Data: apna simulator + <a href="https://logs.px4.io" target="_blank" rel="noopener">logs.px4.io</a> + <a href="https://github.com/castacks/alfa-dataset" target="_blank" rel="noopener">CMU ALFA</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

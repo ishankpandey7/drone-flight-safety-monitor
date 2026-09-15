@@ -10,6 +10,14 @@
   <img src="https://img.shields.io/badge/validated%20on-real%20UAV%20logs-orange" alt="Validated on real UAV logs">
 </p>
 
+<p align="center">
+  <a href="https://drone-flight-safety-monitor.vercel.app"><b>&#9654;&nbsp; Live demo</b></a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://drone-flight-safety-monitor.vercel.app/dashboard.html">Interactive flight replay</a>
+  &nbsp;&middot;&nbsp;
+  <a href="#chalana-kaise-hai">Khud chalao</a>
+</p>
+
 Ek drone girne se pehle chillata hai — motor ka current badhta hai, vibration ka
 pattern badalta hai, ek motor baaki teeno se zyada khinchta hai. Insaan ye 50 Hz
 ke 19 channels me nahi dekh sakta. Model dekh sakta hai.
