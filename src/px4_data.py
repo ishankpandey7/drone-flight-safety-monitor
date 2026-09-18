@@ -154,8 +154,14 @@ def _pick_actuator(D):
     return best
 
 
-def parse_ulog(path, min_flight_s=90):
-    """ULog -> (X (T,19) float32, info) ya (None, reason) agar flight valid nahi."""
+def parse_ulog(path, min_flight_s=90, min_alt_range_m=3.0, min_current_a=1.5):
+    """ULog -> (X (T,19) float32, info) ya (None, reason) agar flight valid nahi.
+
+    Thresholds parameter isliye hain ki RflyMAD jaise dataset (src/rfly_data.py)
+    chhoti indoor hover flights rakhte hain --- wahan 90s / 3m / 1.5A ki shart
+    har achhi flight ko reject kar degi. Default values wahi hain jo
+    logs.px4.io wale kaam me istemaal hui thi, toh PX4 ka nateeja nahi badlta.
+    """
     from pyulog import ULog
     try:
         u = ULog(str(path))
@@ -271,15 +277,18 @@ def parse_ulog(path, min_flight_s=90):
     alt = X[:, CHANNELS.index("alt")]
     curr = X[:, CHANNELS.index("current")]
     pw = X[:, [CHANNELS.index(f"pwm_{i}") for i in range(1, 5)]]
-    if alt.max() - alt.min() < 3.0:
+    if alt.max() - alt.min() < min_alt_range_m:
         return None, f"altitude mushkil se badli ({alt.max()-alt.min():.1f} m)"
-    if float(np.median(curr)) < 1.5:
+    if float(np.median(curr)) < min_current_a:
         return None, f"current bahut kam ({np.median(curr):.2f} A) --- udi nahi"
     if float(np.mean(np.std(pw, axis=0))) < 0.01:
         return None, "PWM hila hi nahi"
 
     info = {
         "uid": path.stem, "n": int(n), "dur_s": round(n / FS, 1),
+        # X ka pehla sample ULog ke is microsecond pe hai. rfly_data.py isse
+        # fault onset (absolute timestamp) ko X ke index me badalta hai.
+        "t0_us": int(t0), "t1_us": int(t1),
         "alt_range": round(float(alt.max() - alt.min()), 1),
         "current_med": round(float(np.median(curr)), 2),
         "voltage_med": round(float(np.median(X[:, CHANNELS.index("voltage")])), 2),

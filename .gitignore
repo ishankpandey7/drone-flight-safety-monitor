@@ -17,6 +17,10 @@ data/px4/*.ulg
 # unse bana dataset (~31 MB) -- px4_build.py banata hai
 data/px4/*.npz
 
+# RflyMAD asli quadcopter dataset (~5.6 GB sirf Real-Motor ka)
+# rfly-openha.github.io se manually download hota hai -- src/rfly_data.py padhta hai
+data/rfly/
+
 # NOTE: data/px4/candidates.json aur data/px4/real_meta.json JAAN BOOJH KAR
 # tracked hain -- unke bina px4_build.py dobara wahi 37 flights nahi la sakta.
 
